@@ -6,10 +6,10 @@ import pickle
 app = Flask(__name__)
 features = ["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope"]
 def loading_model():
-    return pickle.loads(load("/Users/charlotteabitbol/Downloads/ITC_download/Assignment Notebooks/model.joblib"))
+    return pickle.loads(load("./model.joblib"))
 
 def scaling():
-    return pickle.loads(load("/Users/charlotteabitbol/Downloads/ITC_download/Assignment Notebooks/preprocessing.joblib"))
+    return pickle.loads(load("./preprocessing.joblib"))
 
 @app.route('/predict_single')
 def single_prediction():
