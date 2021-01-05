@@ -1,1 +1,1 @@
-web: gunicorn main.py: exerciseheroku
+web: gunicorn main.py: app
